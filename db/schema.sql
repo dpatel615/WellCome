@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS wellcome_db;
+CREATE DATABASE wellcome_db;
