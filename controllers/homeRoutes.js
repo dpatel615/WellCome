@@ -22,7 +22,7 @@ router.get('/login', (req, res) => {
       return;
     }
   
-    res.render('homepage');
+    res.render('login');
   });
 
 module.exports = router;
