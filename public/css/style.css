@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Dancing+Script:wght@500&family=Roboto+Slab:wght@200&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -158,4 +160,84 @@ p {
 
 .form__link:hover {
     text-decoration: underline;
+}
+
+#slider {
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Container {
+    width: 1600px;
+    margin: auto;
+}
+
+.subcontainer {
+    width: 85%;
+    margin: auto;
+}
+
+.slider-img {
+    width: 100%;
+    height: 275px;
+    border-radius: 5px;
+    background-position: center ;
+    background-size: cover;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.slider-img:hover{
+   box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
+}
+
+.slider-img a{
+    opacity: 0;
+    text-decoration: none ;
+    transform: scale(0);
+    transition: 0.8s;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.slide-img:hover a{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.img-1{
+    background-image: url(../images/em-1.png);
+}
+.img-2{
+    background-image: url(../images/em-2.png);
+}
+.img-3{
+    background-image: url(../images/em-3.png);
+}
+.img-4{
+    background-image: url(../images/em-4.png);
+}
+.img-5{
+    background-image: url(../images/em-5.png);
+}
+.img-6{
+    background-image: url(../images/em--6.png);
+}
+.img-7{
+    background-image: url(../images/em-7.png);
+}
+.img-8{
+    background-image: url(../images/em-8.png);
+}
+
+@media(max-width:1600px){
+    .Container{
+        width: 100%;
+    }
 }
