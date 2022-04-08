@@ -16,13 +16,27 @@ router.get('/', async (req, res) => {
 
 // GET route for login page
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/dashboard');
-    return;
-  }
+    // If the user is already logged in, redirect the request to another route
+    if (req.session.logged_in) {
+      res.redirect('/dashboard');
+      return;
+    }
+  
+    res.render('login');
+  });
 
-  res.render('login');
+  // GET route for dashboard page
+router.get('/dashboard', (req, res) => {
+    res.render('dashboard', {
+      logged_in: req.session.user_id
+    });
+});
+
+// GET route for profile page
+router.get('/profile', (req, res) => {
+  res.render('profile', {
+    logged_in: req.session.user_id
+  });
 });
 
 module.exports = router;
