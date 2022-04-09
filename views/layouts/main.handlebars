@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> WellCome | Health and wellness app</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <h1>Well<span class="Come">Come</span> </h1>
+            </div>
+            <nav>
+                <ul>
+                    {{#if logged_in}}
+                    <li> <a href="/"> Home</a></li>
+                    <li><button class="no-button" id="logout">logout</button></li> 
+                    {{else}}
+                    <a href="/login">login</a>
+                    {{/if}}
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div>
+
+        {{{ body }}}
+        
+    </div>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>
