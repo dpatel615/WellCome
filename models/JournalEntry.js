@@ -3,11 +3,11 @@ const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
 
-// Initialize User model (table) by extending off Sequelize's Model class
-class User extends Model {}
+// Initialize JournalEntry model (table) by extending off Sequelize's Model class
+class JournalEntry extends Model {}
 
-// set up fields and rules for User model
-User.init(
+// set up fields and rules for Journal model
+JournalEntry.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -15,9 +15,21 @@ User.init(
       primaryKey: true,
       autoIncrement: true
     },
-    user_name: {
+      date_created: {
+      type:DataTypes.DATEONLY,
+      allowNull:false
+    },
+    thoughts: {
       type:DataTypes.STRING,
       allowNull:false
+    },
+    user_id:{
+      type: DataTypes.INTEGER,
+      references:{
+        model:'user',
+        key: 'id',
+      }
+
     }
   },
     {
@@ -25,8 +37,8 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'journalentry',
   }
 );
 
-module.exports = User;
+module.exports = JournalEntry;

@@ -3,11 +3,11 @@ const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
 
-// Initialize User model (table) by extending off Sequelize's Model class
-class User extends Model {}
+// Initialize Content model (table) by extending off Sequelize's Model class
+class Content extends Model {}
 
-// set up fields and rules for User model
-User.init(
+// set up fields and rules for Content model
+Content.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -15,7 +15,15 @@ User.init(
       primaryKey: true,
       autoIncrement: true
     },
-    user_name: {
+    category: {
+      type:DataTypes.STRING,
+      allowNull:false
+    },
+    content_path: {
+      type:DataTypes.STRING,
+      allowNull:false
+    },
+      video_id: {
       type:DataTypes.STRING,
       allowNull:false
     }
@@ -25,8 +33,8 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'content',
   }
 );
 
-module.exports = User;
+module.exports = Content;
