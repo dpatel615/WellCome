@@ -1,31 +1,36 @@
-// let silder = tns({
-//     Container : "my-slider",
-//     "slideBy": "1",
-//     "speed": 400,
-//     "nav": false,
-//     autoplay: true,
-//     controls: false,
-//     autoplayButtonOutput: false,
-//     responsive: {
-//         1600: {
-//             items:8,
-//             items:7,
-//             gutter:20
-//         },
-//         1024: {
-//             itesm: 6,
-//             items: 5,
-//             gutter :20
-//         },
-//         768: {
-//             items: 4,
-//             items: 3,
-//             gutter: 20
-//         },
-//         480: {
-//             items: 2,
-//             items: 1,
-//             gutter:20
-//         }
-//     }
-// })
+var videoLinks = document.querySelectorAll(".videos-link");
+
+// async function relaxingVedio(event) {
+//     const getData = await fetch('/api/users/logout', {
+//         method: 'POST',
+//         headers: { 'Content-Type': 'application/json' },
+//       });
+    
+//       if (getData.ok) {
+//         document.location.replace('/');
+//       } else {
+//         alert(response.statusText);
+//       }
+//     };
+ 
+ async function getVideoData() {
+     console.log(this.getAttribute('id'));
+    const response = await fetch(`/api/dashboard/${this.id}`, {
+                method: 'GET',
+                headers: { 'Content-Type': 'application/json' },
+              });
+            
+              if (response.ok) {
+                document.location.replace('/api');
+              } else {
+                alert(response.statusText);
+}
+ };
+
+
+
+videoLinks.forEach((link) => {
+    console.log(link);
+    link.addEventListener("click", getVideoData()); 
+
+});
