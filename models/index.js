@@ -1,13 +1,21 @@
+// import models
+const Content = require('./Content');
+const JournalEntry = require('./JournalEntry');
 const User = require('./User');
 
+// 
+User.hasMany(JournalEntry, {
+  foreignKey: 'user_id',
+});
 
-// User.belongsToMany(Content, {
-//     through: {
-//         model: Favorite,
-//         unique: false,
-//     },
-//     as: 'Favorites'
-// });
+// 
+JournalEntry.belongsTo(User, {
+  foreignKey: 'user_id',
+});
 
 
-module.exports = { User };
+module.exports = {
+  Content,
+  JournalEntry,
+  User,
+};
