@@ -16,6 +16,6 @@ JournalEntry.belongsTo(User, {
 
 module.exports = {
   Content,
-  Journal,
+  JournalEntry,
   User,
 };
