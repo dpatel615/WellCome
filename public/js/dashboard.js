@@ -14,14 +14,14 @@ var videoLinks = document.querySelectorAll(".videos-link");
 //     };
  
  async function getVideoData() {
-     console.log(this.getAttribute('id'));
+     console.log(this.getVideoData(id));
     const response = await fetch(`/api/dashboard/${this.id}`, {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' },
               });
             
               if (response.ok) {
-                document.location.replace('/api');
+                document.location.replace('/');
               } else {
                 alert(response.statusText);
 }
