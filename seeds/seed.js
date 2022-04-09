@@ -1,9 +1,9 @@
 const sequelize = require('../config/connection');
-const { User } = require('../models');
+const { User, Content, Favorite } = require('../models');
 
 const userData = require('./userData.json');
-// const contentData = require('./contentData.json');
-// const favData = require('./favoriteData.json');
+const contentData = require('./contentData.json');
+const favData = require('./favoriteData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -13,19 +13,19 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  // for (const content of contentData) {
-  //   await Content.create({
-  //     ...content,
-  //     // user_id: users[Math.floor(Math.random() * users.length)].id,
-  //   });
-  // }
+  for (const content of contentData) {
+    await Content.create({
+      ...content,
+      // user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
 
-  // for (const favorite of favData) {
-  //   await Favorite.create({
-  //     ...favorite,
-  //     // user_id: users[Math.floor(Math.random() * users.length)].id,
-  //   });
-  // }
+  for (const favorite of favData) {
+    await Favorite.create({
+      ...favorite,
+      // user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
 
   process.exit(0);
 };

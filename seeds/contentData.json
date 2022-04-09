@@ -2,31 +2,31 @@
     {
         "category": "Meditation",
         "content_path": "https://www.youtube.com/watch?v=_cQasdAJUkM",
-        "content_videoID": "_cQasdAJUkM"
+        "video_id": "_cQasdAJUkM"
     },
     {
         "category": "Meditation",
         "content_path": "https://www.youtube.com/watch?v=inpok4MKVLM",
-        "content_videoID": "inpok4MKVLM"
+        "video_id": "inpok4MKVLM"
     },
     {
         "category": "Meditation",
         "content_path": "https://www.youtube.com/watch?v=6kVVrE_sCNA",
-        "content_videoID": "6kVVrE_sCNA"
+        "video_id": "6kVVrE_sCNA"
     },
     {
         "category": "Yoga",
         "content_path": "https://www.youtube.com/watch?v=d8QqXLV3tWM",
-        "content_videoID": "d8QqXLV3tWM"
+        "video_id": "d8QqXLV3tWM"
     },
     {
         "category": "Yoga",
         "content_path": "https://www.youtube.com/watch?v=omh5JBndc14",
-        "content_videoID": "omh5JBndc14"
+        "video_id": "omh5JBndc14"
     },
     {
         "category": "Funny",
         "content_path": "https://www.youtube.com/watch?v=jHWKtQHXVJg",
-        "content_videoID": "jHWKtQHXVJg"
+        "video_id": "jHWKtQHXVJg"
     }
 ]
