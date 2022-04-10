@@ -10,12 +10,25 @@ body{
 .navbar .Come{
     
     color: blue;
-   
 }
+
+.custom-main {
+ color: white;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: 'Lavishly Yours', cursive;
+}
+
+h4 {
+    font-family: 'Satisfy', cursive;
+}
+
 nav {
     flex: 1;
     text-align: right;
-
+    color: white;
 }
 
 nav ul {
@@ -28,10 +41,39 @@ nav ul li{
 }
 a{
     text-decoration: none ;
-    color: blueviolet;
+    /* color: blueviolet; */
 }
 p {
     color: bisque;
+}
+
+.header {
+    background-image: url('/images/homepage2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(235, 230, 230, 0.774);
+}
+
+.no-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-size: 100%;
+  }
+
+.custom-nav {
+    color: white;
 }
 
 .container {
@@ -56,13 +98,13 @@ p {
     max-width: 100%;
     padding: 50px 0;
 }
-.header {
+/* .header {
     background: radial-gradient(#fff, #ffd6d6);
 }
 .header .row{
     margin-top: 70px;
 
-}
+} */
 .form--hidden {
     display: none;
 }
@@ -158,4 +200,19 @@ p {
 
 .form__link:hover {
     text-decoration: underline;
+}
+
+.custom-header {
+    background-color: #05445E;
+    /* height: 15%; */
+    color: white;
+    padding: 30px;
+}
+
+.custom-hp-row {
+    /* background-image: url('/images/homepage2.jpg'); */
+    background: url('/images/homepage2.jpg');
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center;
 }

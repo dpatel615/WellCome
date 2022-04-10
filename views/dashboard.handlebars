@@ -1,8 +1,21 @@
 <div>
-    <button type="button" class="video-links" data-id="Meditation">Meditation</button>
+    {{!-- <button type="button" class="video-links" data-id="Meditation">Meditation</button>
+    <button type="button" class="video-links" data-id="Yoga">Yoga</button> --}}
+
+    <a href="/api/dashboard/Meditation" class="video-links button" data-id="Meditation" >Meditation</a>
     <button type="button" class="video-links" data-id="Yoga">Yoga</button>
+
+    <a href="/login" class="custom-main">Login</a>
 </div>
 
-
+<div>
+    {{!-- {{data}} --}}
+    
+    {{#each data as |video|}}
+    {{!-- {{log video}} --}}
+    {{video.snippet.thumbnails.default.url}}
+    <div><iframe width="560" height="315" src="https://www.youtube.com/embed/{{video.id.videoId}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+    {{/each}}
+</div>
 
 {{!-- <script src="/js/dashboard.js"></script>   --}}

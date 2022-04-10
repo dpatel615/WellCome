@@ -14,11 +14,13 @@ const getVideoData = async (event) => {
     // console.log(jsonVal);
     if(response.ok){
         // console.log(jsonVal);
-        return await response.json();
-        // document.location.replace('/dashboard');
+        await response.json();
+        // return response;
+        return document.location.replace('/dashboard/${catName}');
     }else{
         alert(response.statusText);
     }
+    // document.location.reload();
 };
 
 videoLinks.forEach((vlink) => {

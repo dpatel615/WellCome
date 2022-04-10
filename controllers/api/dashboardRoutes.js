@@ -19,14 +19,14 @@ router.get('/:catName', async (req, res) => {
         reqURL += `${process.env.API_KEY}`;
         console.log(reqURL);
         const response = await fetch(reqURL);
-        const data = await response.json();
+        const { items: data } = await response.json(); //Destructuring items(array) into 'data' alias
         // console.log(data);
-        res.send(data);
-        // res.render('dashboard', {
-        //     data,
-        //     dashboard: true,
-        //     logged_in: req.session.user_id
-        // });
+        // res.send(data);
+        res.render('dashboard', {
+            data,   // if at line 22 if you destructure items with no alias this would be data : items
+            dashboard: true,
+            logged_in: req.session.user_id
+        });
 
         // res.status(200).json(data);
 
