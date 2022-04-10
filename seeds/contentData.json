@@ -1,32 +1,14 @@
 [
     {
-        "category": "Meditation",
-        "content_path": "https://www.youtube.com/watch?v=_cQasdAJUkM",
+        "title": "Short Guided Meditation for Anxiety | Calm Your Mind",
         "video_id": "_cQasdAJUkM"
     },
     {
-        "category": "Meditation",
-        "content_path": "https://www.youtube.com/watch?v=inpok4MKVLM",
+        "title": "5-Minute Meditation You Can Do Anywhere",
         "video_id": "inpok4MKVLM"
     },
     {
-        "category": "Meditation",
-        "content_path": "https://www.youtube.com/watch?v=6kVVrE_sCNA",
+        "title": "Short Calming Mindfulness Meditation to Clear the Clutter in your Mind | Mindful Movement",
         "video_id": "6kVVrE_sCNA"
-    },
-    {
-        "category": "Yoga",
-        "content_path": "https://www.youtube.com/watch?v=d8QqXLV3tWM",
-        "video_id": "d8QqXLV3tWM"
-    },
-    {
-        "category": "Yoga",
-        "content_path": "https://www.youtube.com/watch?v=omh5JBndc14",
-        "video_id": "omh5JBndc14"
-    },
-    {
-        "category": "Funny",
-        "content_path": "https://www.youtube.com/watch?v=jHWKtQHXVJg",
-        "video_id": "jHWKtQHXVJg"
     }
 ]
