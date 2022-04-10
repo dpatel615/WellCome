@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title> WellCome | Health and wellness app</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/css/jass.css">
     <link rel="stylesheet" href="/css/style.css">
-
 </head>
 
 <body>
@@ -19,7 +21,7 @@
                 <ul>
                     {{#if logged_in}}
                     <li> <a href="/"> Home</a></li>
-                    <li><button class="no-button" id="logout">logout</button></li> 
+                    <li><button class="no-button" id="logout">logout</button></li>
                     {{else}}
                     <a href="/login">login</a>
                     {{/if}}
@@ -30,8 +32,14 @@
     <div>
 
         {{{ body }}}
-        
+
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
