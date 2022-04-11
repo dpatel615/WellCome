@@ -13,7 +13,14 @@ var quotes =[
  function newQuote() {
    var randonQuotes = Math.floor(Math.random() * (quotes.length));
    document.getElementById('quoteEmotion').innerHTML = quotes[randonQuotes];
- }
+   var x = document.getElementById("emotion");
+   if (x.style.display === "none") {
+     x.style.display = "block";
+   } else {
+     x.style.display = "none";
+   }
+  }
+  
 //var videoLinks = document.querySelectorAll(".videos-link");
 
 
