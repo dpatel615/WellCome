@@ -14,11 +14,14 @@ var quotes =[
    var randonQuotes = Math.floor(Math.random() * (quotes.length));
    document.getElementById('quoteEmotion').innerHTML = quotes[randonQuotes];
    var x = document.getElementById("emotion");
-   if (x.style.display === "none") {
-     x.style.display = "block";
-   } else {
-     x.style.display = "none";
-   }
+   x.style.display= "none"
+  
+   document.getElementById('quoteEmotion').addEventListener('click', displayImage);
+    function displayImage() {
+      document.getElementById('quoteEmotion').innerHTML = "";
+    x.style.display = "initial";
+    }
+    
   }
   
 //var videoLinks = document.querySelectorAll(".videos-link");
