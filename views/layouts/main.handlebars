@@ -4,10 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title> WellCome | Health and wellness app</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Satisfy&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="/css/jass.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -22,6 +27,16 @@
                 <!-- Conditionally render login or logout links -->
                 {{#if logged_in}}
                 <a href="/" class="custom-main">Home</a> |
+                {{#if homepage}}
+                <a href="/dashboard" class="custom-main">Dashboard</a> |
+                <a href="/profile" class="custom-main">Profile</a> |
+                {{/if}}
+                {{#if dashboard}}
+                <a href="/profile" class="custom-main">Profile</a> |
+                {{/if}}
+                {{#if profile}}
+                <a href="/dashboard" class="custom-main">Dashboard</a> |
+                {{/if}}
                 <button class="no-button" id="logout" class="custom-main">Logout</button>
                 {{else}}
                 <a href="/login" class="custom-main">Login</a>
@@ -36,31 +51,17 @@
 
         </footer>
     </div>
-    {{!-- <div class="container"> --}}
-        {{!-- <div class="custom-header">
-            <div class="navbar">
-                <div class="logo">
-                    <h1>WELLcome</h1>
-                </div>
-                <nav>
-                    <ul>
-                        {{#if logged_in}}
-                        <li> <a href="/" class="custom-nav"> Home</a></li>
-                        <li><button class="no-button" id="logout">Logout</button></li>
-                        {{else}}
-                        <a href="/login" class="custom-nav">Login</a>
-                        {{/if}}
-                    </ul>
-                </nav>
-            </div>
-        </div> --}}
-        {{!-- <div>
-            {{{ body }}}
-        </div> --}}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-        {{#if logged_in}}
-        <script src="/js/logout.js"></script>
-        {{/if}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
