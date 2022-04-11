@@ -7,6 +7,7 @@ router.get('/', async (req, res) => {
   try {
     
     res.render('homepage', { 
+        homepage: true,
         logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -28,6 +29,7 @@ router.get('/login', (req, res) => {
   // GET route for dashboard page
 router.get('/dashboard', (req, res) => {
     res.render('dashboard', {
+      dashboard: true,
       logged_in: req.session.user_id
     });
 });
@@ -35,6 +37,7 @@ router.get('/dashboard', (req, res) => {
 // GET route for profile page
 router.get('/profile', (req, res) => {
   res.render('profile', {
+    profile: true,
     logged_in: req.session.user_id
   });
 });

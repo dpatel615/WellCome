@@ -1,0 +1,25 @@
+<div>
+    {{!-- {{data}} --}}
+    {{#each data as |video|}}
+    <div> Title: {{video.snippet.title}} </div>
+    <div><img src={{video.snippet.thumbnails.medium.url}} class="video-url" id={{video.id.videoId}} /></div>
+    {{!-- {{log video}} --}}
+    {{!-- {{video.snippet.thumbnails.default.url}}
+    <div><iframe width="560" height="315" src="https://www.youtube.com/embed/{{video.id.videoId}}" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe></div> --}}
+    {{/each}}
+</div>
+
+{{!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large
+    modal</button>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            ...
+        </div>
+    </div>
+</div> --}}
+
+{{!-- <script src="/js/dashboard.js"></script> --}}
