@@ -1,9 +1,8 @@
 const router = require('express').Router();
-const { Content, Favorite } = require('../../models');
+const { Content } = require('../../models');
 const withAuth = require('../../utils/auth');
 const { route } = require('./userRoutes');
-// const nodeFetch = require('node-fetch');
-// import fetch from 'node-fetch';
+
 const fetch = require('node-fetch');
 require('dotenv').config();
 

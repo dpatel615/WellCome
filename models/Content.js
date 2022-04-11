@@ -4,7 +4,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // Initialize Content model (table) by extending off Sequelize's Model class
-class Content extends Model { }
+class Content extends Model {}
 
 // set up fields and rules for Content model
 Content.init(
@@ -15,24 +15,20 @@ Content.init(
       primaryKey: true,
       autoIncrement: true
     },
-    // category: {
-    //   type:DataTypes.STRING,
-    //   allowNull:false
-    // },
-    // content_path: {
-    //   type:DataTypes.STRING,
-    //   allowNull:false
-    // },
-    title: {
+    category: {
       type:DataTypes.STRING,
       allowNull:false
     },
-    video_id: {
-      type: DataTypes.STRING,
-      allowNull: false
+    content_path: {
+      type:DataTypes.STRING,
+      allowNull:false
+    },
+      video_id: {
+      type:DataTypes.STRING,
+      allowNull:false
     }
   },
-  {
+    {
     sequelize,
     timestamps: false,
     freezeTableName: true,
