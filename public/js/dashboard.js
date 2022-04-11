@@ -18,27 +18,3 @@ var quotes =[
 
 
  
- async function getVideoData(event) {
-   //event prevent default()
-   const catName = event.target.getAttribute('data-id');
-
-     console.log(this.getVideoData(id));
-    const response = await fetch(`/api/dashboard/${catName}`, {
-                method: 'GET',
-                headers: { 'Content-Type': 'application/json' },
-              });
-            
-              if (response.ok) {
-                document.location.replace('/');
-              } else {
-                alert(response.statusText);
-}
- };
-
-
-
-videoLinks.forEach((vlink) => {
-    console.log(vlink);
-    link.addEventListener("click", getVideoData); 
-
-});
