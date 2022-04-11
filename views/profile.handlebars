@@ -1,6 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<div>
-    {{#each entries as |journal|}}
-    {{journal.thoughts}}
-    {{/each}}
-</div>
+<head>
+    <meta charset="UTF-8">
+    <title> WellCome | Health and wellness app</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <button type="submit" id="dash-button" class="btn btn-primary">Home</button>
+                <button type="submit" id="dash-button" class="btn btn-primary">Dashboard</button>
+                <button type="submit" id="dash-button" class="btn btn-primary">logout</button>    
+            </ul> 
+        </div>
+    </div>  
+
+    <div class="journal-page">
+        <P>Journal</P>
+
+    </div>
+    
+    <section class="journal">
+        <div class="submisions">
+                <button type="submit" id="journal-btn" class="btn btn-primary">Entries</button>
+                <button type="submit" id="journal-btn" class="btn btn-primary">Delete</button>
+                <button type="submit" id="journal-btn" class="btn btn-primary">Update</button>   
+        </div>
+    </section>
+        <br>
+        <form action="/action_page.php">
+            <label for="curent-day">Date:</label>
+            <input type="date" id="todays-date" name="todays-date">
+        </form>
+
+        <br>
+
+     <div class="div-1">
+         <div style="width:300px;height:100px;line-height:3em;overflow:scroll;padding:5px;background-color:#FCFADD;color:#714D03;scrollbar-base-color:#DEBB07;"> <!-- remove input tag if you dont figure it out --><input type="text" id="entries" name="entires"> 
+                This 'div' element uses 'overflow:scroll' to create scrollbars whenever the contents of the 'div' become too large.      
+        </div>
+    </div>    
+    <br>
+    <div class="submit">
+        <button type="submit" id="submit-btn" class="btn btn-primary">Submit</button>
+        </div>
+
+</body>
