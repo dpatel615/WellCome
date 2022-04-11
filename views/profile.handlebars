@@ -48,4 +48,10 @@
         <button type="submit" id="submit-btn" class="btn btn-primary">Submit</button>
         </div>
 
+<div>
+    {{#each entries as |journal|}}
+    {{journal.thoughts}}
+    {{/each}}
+</div>
+
 </body>
