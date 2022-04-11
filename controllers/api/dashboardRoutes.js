@@ -3,6 +3,9 @@ const { Content } = require('../../models');
 const withAuth = require('../../utils/auth');
 const { route } = require('./userRoutes');
 
+const fetch = require('node-fetch');
+require('dotenv').config();
+
 // GET route to retrieve videos based on user category selection
 router.get('/:catName', withAuth, async (req, res) => {
     try {
