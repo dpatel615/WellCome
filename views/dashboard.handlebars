@@ -20,10 +20,48 @@
     <button type="button" id="Meditation" class="videos-link"><img src="/images/meditation.png" height="300px" width="100%"/></button>
      <button type="button" id="Yoga" class="videos-link"><img src="/images/yoga.png" height="300px" width="100%"/></button>
       <button type="button" id="Music" class="videos-link"><img src="/images/music.png" height="300px" width="100%"/></button>
+    {{!-- <button type="button" class="video-links" data-id="Meditation">Meditation</button>
+    <button type="button" class="video-links" data-id="Yoga">Yoga</button> --}}
+
+    {{!-- <a href="/api/dashboard/Meditation" class="video-links button" data-id="Meditation"><img
+            src="/images/Meditation.jpg" alt="Meditation" width="300" height="230">Meditation</a> --}}
+    {{!-- <a href="/api/dashboard/Yoga" class="video-links button" data-id="Yoga">Yoga</a>
+    <a href="/api/dashboard/Music" class="video-links button" data-id="Music">Music</a> --}}
+    {{!-- <button type="button" class="video-links" data-id="Yoga">Yoga</button> --}}
 
 </div>
+<div class="row">
+    <div class="col-md-4 image_div">
+        <a href="/api/dashboard/Meditation" class="video-links button" data-id="Meditation">
+            <img src="/images/Meditation_2.jpg" alt="Meditation" width="300" height="200">
+            <p class="image_label"><span>Meditation</span></p>
+        </a>
+    </div>
 
+    <div class="col-md-4 image_div">
+        <a href="/api/dashboard/Yoga" class="video-links button" data-id="Yoga">
+            <img src="/images/Meditation_2.jpg" alt="Yoga" width="300" height="200">
+            <p class="image_label"><span>Yoga</span></p>
+        </a>
+    </div>
 
+    <div class="col-md-4 image_div">
+        <a href="/api/dashboard/Music" class="video-links button" data-id="Music">
+            <img src="/images/Meditation_2.jpg" alt="Music" width="300" height="200">
+            <p class="image_label"><span>Music</span></p>
+        </a>
+    </div>
+</div>
+{{!-- <div>
+    {{!-- {{data}} --}}
+    {{!-- {{#each data as |video|}} --}}
+    {{!-- {{log video}}
+    {{video.snippet.thumbnails.default.url}}
+    <div><iframe width="560" height="315" src="https://www.youtube.com/embed/{{video.id.videoId}}" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+    {{/each}} --}}
+    {{!--
+</div> --}}
 
 
 
