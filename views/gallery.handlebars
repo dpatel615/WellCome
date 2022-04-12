@@ -1,22 +1,33 @@
 <div>
     <div class="row custom-row">
+        {{!-- If view rendered is to display favorites --}}
+        {{#if favorite}}
+        {{#each data.Favorites as |video|}}
+        <div class="col-md-6">
+            <div class="row vTitle"> Title: {{video.title}} </div>
+            <div class="row">
+                <img src={{video.thumbnail}} class="video-url" id={{video.video_id}} alt="{{video.title}}"
+                    data-value="{{video.title}}" />
+            </div>
+        </div>
+        {{/each}}
+        {{else}}
+        {{!-- If view rendered is to show the gallery of all videos --}}
         {{#each data as |video|}}
         <div class="col-md-6">
             <div class="row vTitle"> Title: {{video.snippet.title}} </div>
             <div class="row">
-                {{!-- <img src={{video.snippet.thumbnails.medium.url}} class="video-url" id={{video.id.videoId}}
-                    data-toggle="modal" data-target=".bd-example-modal-lg" alt="{{video.snippet.title}}"
-                    data-value="{{video.snippet.title}}" /> --}}
-                <img src={{video.snippet.thumbnails.medium.url}} class="video-url" id={{video.id.videoId}} alt="{{video.snippet.title}}" data-value="{{video.snippet.title}}" />
+                <img src={{video.snippet.thumbnails.medium.url}} class="video-url" id={{video.id.videoId}}
+                    alt="{{video.snippet.title}}" data-value="{{video.snippet.title}}" />
             </div>
         </div>
         {{/each}}
+        {{/if}}
     </div>
 </div>
 
 <div class="video-player">
-    {{!-- <button type="button" class="btn btn-primary" id="sFav">Save</button> --}}
+    {{!-- Display youtube video here --}}
 </div>
 
-{{!-- <script>('/gallery');</script> --}}
 <script src="/js/gallery.js"></script>

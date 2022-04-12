@@ -25,7 +25,8 @@ Content.init(
     },
     video_id: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      unique: true
     }
   },
   {
