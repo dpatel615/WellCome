@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title> WellCome | Health and wellness app</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/jass.css">
 </head>
 
 <body>
@@ -31,8 +32,11 @@
         <br>
 
      <div class="div-1">
-         <div style="width:300px;height:100px;line-height:3em;overflow:scroll;padding:5px;background-color:#FCFADD;color:#714D03;scrollbar-base-color:#DEBB07;"> <!-- remove input tag if you dont figure it out -->
-            <input type="text" id="info" name="info"> 
+        
+            <form> 
+                <input type="text" id="info" name="info" placeholder="Enter text here.">
+                <button type="submit" id="submitBtn">Submit your entry</button> <!-- new submit btn -->
+            </form>  
                 This 'div' element uses 'overflow:scroll' to create scrollbars whenever the contents of the 'div' become too large.      
         </div>
     </div>    
@@ -47,9 +51,7 @@
             {{/each}}
         </div>  -->
 
-<script src="./assets/profile.js" >
-    
-</script>
+<script src="/js/profile.js"></script>
 
 </body>
 </html>
