@@ -201,18 +201,33 @@ p {
 .form__link:hover {
     text-decoration: underline;
 }
-.emotion img{
-    margin-left: 50px;
+#emotion img{
+    /* margin-left: 70px;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 80px; */
     background-color: #ffd6d6;
+
  }
  #quoteEmotion {
      font-size: 36px;
      padding: auto;
-     background-color: darkorange;
-     text-decoration-color: blueviolet;
+     background-color: lightcoral;
+     text-decoration-color: rgb(226, 43, 211);
      text-align: center;
+     font-family: 'Satisfy', cursive;
+
+ }
+
+ button { 
+     margin-right: 250px;
+     margin-bottom: 80px;
+ }
+ .row{
+     margin-top: 100px;
+ }
+ .relax {
+    font-family: 'Satisfy', cursive;
+    background-color: #596e5a;
  }
 .custom-header {
     background-color: #05445E;
