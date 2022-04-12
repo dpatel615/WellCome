@@ -1,25 +1,22 @@
 <div>
-    {{!-- {{data}} --}}
-    {{#each data as |video|}}
-    <div> Title: {{video.snippet.title}} </div>
-    <div><img src={{video.snippet.thumbnails.medium.url}} class="video-url" id={{video.id.videoId}} /></div>
-    {{!-- {{log video}} --}}
-    {{!-- {{video.snippet.thumbnails.default.url}}
-    <div><iframe width="560" height="315" src="https://www.youtube.com/embed/{{video.id.videoId}}" frameborder="0"
-            allow="autoplay; encrypted-media" allowfullscreen></iframe></div> --}}
-    {{/each}}
+    <div class="row custom-row">
+        {{#each data as |video|}}
+        <div class="col-md-6">
+            <div class="row vTitle"> Title: {{video.snippet.title}} </div>
+            <div class="row">
+                {{!-- <img src={{video.snippet.thumbnails.medium.url}} class="video-url" id={{video.id.videoId}}
+                    data-toggle="modal" data-target=".bd-example-modal-lg" alt="{{video.snippet.title}}"
+                    data-value="{{video.snippet.title}}" /> --}}
+                <img src={{video.snippet.thumbnails.medium.url}} class="video-url" id={{video.id.videoId}} alt="{{video.snippet.title}}" data-value="{{video.snippet.title}}" />
+            </div>
+        </div>
+        {{/each}}
+    </div>
 </div>
 
-{{!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large
-    modal</button>
+<div class="video-player">
+    {{!-- <button type="button" class="btn btn-primary" id="sFav">Save</button> --}}
+</div>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            ...
-        </div>
-    </div>
-</div> --}}
-
-{{!-- <script src="/js/dashboard.js"></script> --}}
+{{!-- <script>('/gallery');</script> --}}
+<script src="/js/gallery.js"></script>

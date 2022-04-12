@@ -15,15 +15,11 @@ Content.init(
       primaryKey: true,
       autoIncrement: true
     },
-    // category: {
-    //   type:DataTypes.STRING,
-    //   allowNull:false
-    // },
-    // content_path: {
-    //   type:DataTypes.STRING,
-    //   allowNull:false
-    // },
     title: {
+      type:DataTypes.STRING,
+      allowNull:false
+    },
+    thumbnail: {
       type:DataTypes.STRING,
       allowNull:false
     },
