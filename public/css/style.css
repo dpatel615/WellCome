@@ -4,13 +4,9 @@
     
 }
 body{
-    background: radial-gradient(#fff, #ffd6d6);
-    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(#fff, #EED6D3);
+    /* font-family: 'Satisfy', cursive; */
     }
-/* .navbar .Come{
-    
-    color: blue;
-} */
 
 .custom-main {
  color: white;
@@ -20,7 +16,12 @@ h1 {
     font-size: 4rem;
     font-family: 'Lavishly Yours', cursive;
 }
+h2 {
+ font-size: 3rem;
+ font-family: 'Satisfy', cursive;
+}
 
+h3,
 h4 {
     font-family: 'Satisfy', cursive;
 }
@@ -41,7 +42,6 @@ nav ul li{
 }
 a{
     text-decoration: none ;
-    /* color: blueviolet; */
 }
 p {
     color: bisque;
@@ -57,9 +57,9 @@ p {
     position: absolute;
     min-height: 100%;
     min-width: 100%;
-    left: 0;
-    top: 0;
-    background: rgba(235, 230, 230, 0.774);
+    left: 0px;
+    top: 0px;
+    background: rgba(235, 230, 230, 0.4);
 }
 
 .no-button {
@@ -98,13 +98,13 @@ p {
     max-width: 100%;
     padding: 50px 0;
 }
-/* .header {
-    background: radial-gradient(#fff, #ffd6d6);
-}
-.header .row{
-    margin-top: 70px;
 
-} */
+.login-form,
+.signup-form {
+    width: 50%; 
+    margin-left: 25%;
+}
+
 .form--hidden {
     display: none;
 }
@@ -168,10 +168,13 @@ p {
 }
 
 .form__button {
-    width: 100%;
+    font-family: 'Satisfy', cursive;
+    width: 40%;
+    height: 50px;
+    margin-left: 30%;
     padding: 1rem 2rem;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: black;
     border: none;
     border-radius: var(--border-radius);
@@ -196,6 +199,8 @@ p {
     color: black;
     text-decoration: none;
     cursor: pointer;
+    font-family: 'Lavishly Yours';
+    font-size: 2rem;
 }
 
 .form__link:hover {
@@ -222,11 +227,12 @@ p {
 }
 
 .custom-hp-row {
-    /* background-image: url('/images/homepage2.jpg'); */
+    height: 500px;
     background: url('/images/homepage2.jpg');
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: center;
+    position: relative;
 }
 
 .image_div
@@ -235,11 +241,6 @@ p {
  margin-left:245px;
  /* position:relative; */
 }
-
-/* #image_div img
-{
- /* width:100%; 
-} */
 
 .image_div,
 .image_label
@@ -283,4 +284,36 @@ textarea {
   resize: none;
   background-color: #05445E;
   color: white;
+}
+.custom-intro-1 {
+    z-index: 1;
+    color: #05445E;
+    margin-top: 7%
+}
+
+.custom-intro-2 {
+    z-index: 1;
+    color: #05445E;
+    margin-top: 3%
+}
+.custom-homebtn{
+    color:white;
+    z-index: 1;
+    font-size: 1.7rem;
+    width: 20%;
+    font-family: 'Satisfy', cursive;
+}
+.col-md-6 {
+    text-align: -webkit-center;
+}
+
+.custom-card {
+    width: 20rem;
+    background-color: #45B08C;
+     /* #C2DDDC; */
+    font-family: 'Satisfy', cursive;
+    padding: 0.7rem;
+    border:0px;
+    color:white;
+    text-align: center;
 }

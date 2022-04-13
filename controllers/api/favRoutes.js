@@ -1,18 +1,20 @@
 const router = require('express').Router();
-const { Content, Favorite } = require('../../models');
+const { Favorite, Content } = require('../../models');
 const withAuth = require('../../utils/auth');
-const { route } = require('./userRoutes');
-// const fetch = require('node-fetch');
-// require('dotenv').config();
 
-// POST route to add favorites
-router.post('/', withAuth, async (req, res) => {
+// POST route to add a favorite
+router.post('/', async (req, res) => {
+
+    // const existngRec = await Content.create({
+
+    // });
     const newContent = await Content.create({
-        ...req.body,
+        title: req.body.videoAlt,
+        thumbnail: req.body.videoSrc,
+        video_id: req.body.videoID
     });
 
     const getContent = newContent.get({ plain: true });
-
     const newFav = await Favorite.create({
         user_id: req.session.user_id,
         content_id: getContent.id,
@@ -22,4 +24,3 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 module.exports = router;
-
