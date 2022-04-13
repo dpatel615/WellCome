@@ -1,5 +1,5 @@
-var button = document.getElementById("entries");
-var info = document.getElementById("info");
+var button = document.getElementById("click");
+var info = document.getElementById("ta");
 
 
 
