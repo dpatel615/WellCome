@@ -47,7 +47,7 @@ router.get('/profile', withAuth, async (req, res) => {
 // GET route for gallery
 router.get('/gallery', withAuth, async (req, res) => {
   res.render('gallery', {
-    dashboard: true,
+    // dashboard: true,
     logged_in: req.session.user_id
   });
 });
@@ -101,6 +101,7 @@ router.get('/:catName', withAuth, async (req, res) => {
     res.render('gallery', {
       data,   // if at line 22 if you destructure items with no alias this would be data : items
       dashboard: true,
+      profile: true,
       logged_in: req.session.user_id
     });
 

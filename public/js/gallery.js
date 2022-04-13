@@ -28,7 +28,9 @@ const saveFavorite = async () => {
         });
 
         if (response.ok) {
-            document.location.replace('/dashboard');
+            swal("", "Saved as favorite", "success");
+            // swal("Good job!", "You clicked the button!", "success");
+            // document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }

@@ -1,33 +1,37 @@
-<div>
+
     <div class="row custom-row">
         {{!-- If view rendered is to display favorites --}}
         {{#if favorite}}
+        
         {{#each data.Favorites as |video|}}
         <div class="col-md-6">
-            <div class="row vTitle"> Title: {{video.title}} </div>
-            <div class="row">
-                <img src={{video.thumbnail}} class="video-url" id={{video.video_id}} alt="{{video.title}}"
-                    data-value="{{video.title}}" />
+            <div class="card custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">{{video.title}}</h5>
+                </div>
+                <img class="card-img-top video-url" src={{video.thumbnail}} id={{video.video_id}}
+                    alt="{{video.title}}" data-value="{{video.title}}" />
             </div>
         </div>
         {{/each}}
+        
         {{else}}
         {{!-- If view rendered is to show the gallery of all videos --}}
         {{#each data as |video|}}
         <div class="col-md-6">
-            <div class="row vTitle"> Title: {{video.snippet.title}} </div>
-            <div class="row">
-                <img src={{video.snippet.thumbnails.medium.url}} class="video-url" id={{video.id.videoId}}
+             <div class="card custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">{{video.snippet.title}}</h5>
+                </div>
+                <img class="card-img-top video-url" src={{video.snippet.thumbnails.medium.url}} id={{video.id.videoId}}
                     alt="{{video.snippet.title}}" data-value="{{video.snippet.title}}" />
             </div>
         </div>
         {{/each}}
         {{/if}}
     </div>
-</div>
 
-<div class="video-player">
-    {{!-- Display youtube video here --}}
-</div>
-
-<script src="/js/gallery.js"></script>
+    <div class="video-player">
+        {{!-- Display youtube video here --}}
+    </div>
+    <script src="/js/gallery.js"></script>

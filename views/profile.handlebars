@@ -1,15 +1,13 @@
-<!DOCTYPE html>
+{{!-- <!DOCTYPE html>
 <html lang="en">
 
-<div>
-    <a href="/favorites">Favorites</a>
-</div>
 
-<div>
+{{!-- <div>
     {{#each entries as |journal|}}
     {{journal.thoughts}}
     {{/each}}
-</div>
+</div> --}}
+
 <head>
     <meta charset="UTF-8">
     <title> WellCome | Health and wellness app</title>
@@ -17,48 +15,54 @@
 </head>
 
 <body>
-   
+    <div>
+        <a href="/favorites">Favorites</a>
+    </div>
 
     <div class="journal-page">
         <P>Journal</P>
 
     </div>
-    
+
     <section class="journal">
         <div class="submissions">
-                <button id="entries" class="btn btn-primary">Entries</button>
-                <button type="submit" id="delete" class="btn btn-primary">Delete</button>
-                <button type="submit" id="update" class="btn btn-primary">Update</button>   
+            <button id="entries" class="btn btn-primary">Entries</button>
+            <button type="submit" id="delete" class="btn btn-primary">Delete</button>
+            <button type="submit" id="update" class="btn btn-primary">Update</button>
         </div>
     </section>
-        <br>
-        <form action="/action_page.php">
-            <label for="curent-day">Date:</label>
-            <input type="date" id="todays-date" name="todays-date">
-        </form>
+    <br>
+    <form action="/action_page.php">
+        <label for="curent-day">Date:</label>
+        <input type="date" id="todays-date" name="todays-date">
+    </form>
 
-        <br>
+    <br>
 
-     <div class="div-1">
-         <div style="width:300px;height:100px;line-height:3em;overflow:scroll;padding:5px;background-color:#FCFADD;color:#714D03;scrollbar-base-color:#DEBB07;"> <!-- remove input tag if you dont figure it out -->
-            <input type="text" id="info" name="info"> 
-                This 'div' element uses 'overflow:scroll' to create scrollbars whenever the contents of the 'div' become too large.      
+    <div class="div-1">
+        <div
+            style="width:300px;height:100px;line-height:3em;overflow:scroll;padding:5px;background-color:#FCFADD;color:#714D03;scrollbar-base-color:#DEBB07;">
+            <!-- remove input tag if you dont figure it out -->
+            <input type="text" id="info" name="info">
+            This 'div' element uses 'overflow:scroll' to create scrollbars whenever the contents of the 'div' become too
+            large.
         </div>
-    </div>    
+    </div>
     <br>
     <div class="submit">
         <button type="submit" id="submit-btn" class="btn btn-primary">Submit</button>
-        </div>
+    </div>
 
-        <!-- <div>
+    <!-- <div>
             {{#each entries as |journal|}}
             {{journal.thoughts}}
             {{/each}}
         </div>  -->
 
-<script src="./assets/profile.js" >
-    
-</script>
+    <script src="./assets/profile.js">
+
+    </script>
 
 </body>
+
 </html>
