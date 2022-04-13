@@ -5,6 +5,7 @@
 }
 body{
     background: radial-gradient(#fff, #EED6D3);
+    /* font-family: 'Satisfy', cursive; */
     }
 
 .custom-main {
@@ -20,6 +21,7 @@ h2 {
  font-family: 'Satisfy', cursive;
 }
 
+h3,
 h4 {
     font-family: 'Satisfy', cursive;
 }
@@ -286,7 +288,7 @@ span
 }
 
 .custom-card {
-    width: 27rem;
+    width: 20rem;
     background-color: #45B08C;
      /* #C2DDDC; */
     font-family: 'Satisfy', cursive;
