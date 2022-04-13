@@ -1,12 +1,21 @@
 <div class="div-1">
         
-            <form> 
-                <input type="text" id="info" name="info" placeholder="Enter text here."> 
-               <textarea id="jo-entry" name="entry" rows="4" cols="50" placeholder="Enter text here">
+             <form>
+             {{!-- action="/action_page.php" 
+             <label for="journal entry">How are you feeling ?</label>  
+             <input tpe="text" id="feelings" name="feelings">
+             <label for="date">Date:</label> 
+             <input type="text" id="jo-entry" name="date" placeholder="Enter date" readonly> <br>
+             <label for="journal entry">How are you feeling ?</label> 
+            <input type="submit" value="submit">   --}} 
+                   <input type="text" id="info" name="info" placeholder="Enter text here."> 
+               
+                <textarea id="jo-entry" name="jo-entry" rows="4" cols="50" placeholder="Enter text here">
 
-               </textarea>
 
-                <button type="submit" id="submitBtn">Submit your entry</button> <!-- new submit btn -->
+                </textarea>
+
+                <button type="submit" id="submitBtn">Submit</button> <!-- new submit btn -->  
             </form>  
                     
         </div>
@@ -14,3 +23,12 @@
 <script src="/js/profile.js"></script>
 
 
+{{!-- <form> 
+                {{!-- <input type="text" id="info" name="info" placeholder="Enter text here.">  --}}
+                
+               <textarea id="jo-entry" name="entry" rows="4" cols="50" placeholder="Enter text here">
+
+               </textarea>
+
+                <button type="submit" id="submitBtn">Submit</button> <!-- new submit btn -->
+            </form>  --}}

@@ -15,13 +15,13 @@ var submitbttn = document.getElementById("submitBtn");
 const sendData = async (event) => {
     try {
         event.preventDefault();
-        var info = document.getElementById("jo-entry").value; // yessssss!
+        var thoughts = document.getElementById("jo-entry").value; // yessssss!
     console.log("send data");
-    console.log(info);
+    console.log(thoughts);
 
  const response = await fetch(`/api/profiles`, {
     method: 'POST',
-    body: JSON.stringify({info}),
+    body: JSON.stringify({thoughts}),
     headers: {
       'Content-Type': 'application/json',
     },
