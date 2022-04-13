@@ -201,7 +201,19 @@ p {
 .form__link:hover {
     text-decoration: underline;
 }
-
+.emotion img{
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: #ffd6d6;
+ }
+ #quoteEmotion {
+     font-size: 36px;
+     padding: auto;
+     background-color: darkorange;
+     text-decoration-color: blueviolet;
+     text-align: center;
+ }
 .custom-header {
     background-color: #05445E;
     /* height: 15%; */
