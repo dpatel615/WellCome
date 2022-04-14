@@ -23,7 +23,9 @@ h2 {
 
 h3,
 h4 {
+    font-size: 3rem;
     font-family: 'Satisfy', cursive;
+    color: #05445E;
 }
 
 nav {
@@ -88,6 +90,7 @@ p {
     flex-wrap: wrap;
     margin-left: 20px;
     justify-content: space-around;
+
 }
 .col-2 {
     flex-basis:50%;
@@ -206,18 +209,48 @@ p {
 .form__link:hover {
     text-decoration: underline;
 }
-.emotion img{
-    margin-left: 50px;
+#emotion img{
+    /* margin-left: 70px;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 80px; */
     background-color: #ffd6d6;
+    border: #eeeeee;
+     border-radius: 50%;
+
+
  }
  #quoteEmotion {
-     font-size: 36px;
+     font-size: 2rem;
      padding: auto;
-     background-color: darkorange;
-     text-decoration-color: blueviolet;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+     text-decoration-color: rgb(226, 43, 211);
      text-align: center;
+     font-family: 'Satisfy', cursive;
+
+ }
+button {
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+  
+ .row{
+     margin-top: 100px;
+     
+ }
+ #relaxing {
+    font-family: 'Satisfy', cursive;
+    margin-top: 80px;
+    color:#05445E;
+    text-align: center;
+    font-size: 3rem;
+ }
+ .git {
+     text-align: center;
+     font-size: 3rem;
+     color: #05445E;
+     font-family: 'Satisfy', cursive;
+ 
  }
 .custom-header {
     background-color: #05445E;
