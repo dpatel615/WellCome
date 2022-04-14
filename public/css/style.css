@@ -46,7 +46,7 @@ a{
     text-decoration: none ;
 }
 p {
-    color: bisque;
+    color:#05445E;
 }
 
 .header {
@@ -85,11 +85,11 @@ p {
     padding-right: 25px;
 }
 .row {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    margin-left: 20px;
-    justify-content: space-around;
+    flex-wrap: wrap; */
+    /* margin-left: 20px; */
+    justify-content: center;
 
 }
 .col-2 {
@@ -234,27 +234,28 @@ button {
 }
 
   
- .row{
-     /* margin-top: 100px; */
+ /* .row{
+     margin-top: 100px;
      
- }
+ } */
  #relaxing {
     font-family: 'Satisfy', cursive;
-    margin-top: 80px;
+    /* margin-top: 80px; */
     color:#05445E;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    padding: 30px 0px 35px 0px;
  }
  .git {
      text-align: center;
-     font-size: 2.5rem;
+     font-size: 2.2rem;
      color: #05445E;
      font-family: 'Satisfy', cursive;
  }
 
  .custom-emotions{
      height: 110px;
-     width: 150px;
+     width: 145px;
  }
 
  .custom-emotions:hover {
@@ -299,7 +300,7 @@ span
 {
  /* background-color: #0B4C5F; */
  opacity:0.8;
- font-size:3.5rem;;
+ font-size:3rem;;
  padding:7px;
  box-sizing:border-box;
  color:#05445E;
@@ -308,10 +309,11 @@ span
 }
 
 #submitBtn {
-    border-radius: 3px;
+    /* border-radius: 3px;
     background-color: #05445E;
     color: white;
-    height: 30px;
+    height: 30px; */
+    font-family: 'Satisfy', cursive;
 }
 
 textarea {
@@ -372,4 +374,8 @@ textarea {
     background-color: #D4F1F4;
     color:#05445E;
     /* border-radius: 20% 2%; */
+}
+
+.profile-links {
+    text-decoration: underline;
 }

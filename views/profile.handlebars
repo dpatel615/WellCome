@@ -3,15 +3,15 @@
     <h3>Journal: </h3>
   </div>
   <div class="col-md-6 text-right">
-    <a href="/favorites" class="pr-3">View my favorites</a>
-    <a href="/api/profiles">Journal entry history</a>
+    <a href="/favorites" class="pr-3 profile-links">View my favorites</a>
+    <a href="/api/profiles" class="profile-links">Journal entry history</a>
   </div>
   <form>
     {{!-- <label for="journal entry">Date</label> --}}
     <div id="date" class="pb-3"></div>
     <textarea id="jo-entry" name="jo-entry" rows="4" cols="50" autofocus placeholder="Pen your thoughts here...">
     </textarea>
-    <button type="submit" id="submitBtn">Submit</button>
+    <button type="submit" class="btn btn-primary" id="submitBtn">Save</button>
   </form>
 </div>
 
