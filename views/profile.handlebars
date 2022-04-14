@@ -1,37 +1,43 @@
 <div class="div-1">
         
-        <div>
-        <a href="/favorites">Favorites</a>
-    </div>
+          <div>
+        <a href="/favorites">View my favorites</a>
+    </div> 
+         <div>
+        <a href="/api/profiles">Journal entry history</a>
+    </div> 
              <form>
-             {{!-- action="/action_page.php" 
-             <label for="journal entry">How are you feeling ?</label>  
-             <input tpe="text" id="feelings" name="feelings">
-             <label for="date">Date:</label> 
-             <input type="text" id="jo-entry" name="date" placeholder="Enter date" readonly> <br>
-             <label for="journal entry">How are you feeling ?</label> 
-            <input type="submit" value="submit">   --}} 
-                   <input type="text" id="info" name="info" placeholder="Enter text here."> 
-               
+                    <label for="journal entry">Date</label>
+                    {{!-- <input type="text" id="date" name="info" readonly placeholder="Enter date."> --}}
+               <div id="date"></div>
                 <textarea id="jo-entry" name="jo-entry" rows="4" cols="50" placeholder="Enter text here">
 
 
                 </textarea>
 
-                <button type="submit" id="submitBtn">Submit</button> <!-- new submit btn -->  
+                <button type="submit" id="submitBtn">Submit</button>   
             </form>  
                     
         </div>
 
+<div> 
+    {{#each entries as |entry|}}
+{{entry.thoughts}} {{entry.date_created}}
+{{/each}}
+</div>
+
+ {{#each entries as |entry|}}
+<div class="card">
+  {{!-- <h5 class="card-header">Featured</h5> --}}
+  <div class="card-body">
+    <h5 class="card-title">Date: {{entry.date_created}}</h5>
+    <p class="card-text">{{entry.thoughts}}</p>
+    <input type="hidden" class="entryId" value={{entry.id}}>
+    <a href="/api/profiles/{{entry.id}}" id={{entry.id}} class="btn btn-primary delete-btn">Delete</a>
+
+  </div>
+</div>
+{{/each}}
 <script src="/js/profile.js"></script>
 
 
-{{!-- <form> 
-                {{!-- <input type="text" id="info" name="info" placeholder="Enter text here.">  --}}
-                
-               <textarea id="jo-entry" name="entry" rows="4" cols="50" placeholder="Enter text here">
-
-               </textarea>
-
-                <button type="submit" id="submitBtn">Submit</button> <!-- new submit btn -->
-            </form>  --}}

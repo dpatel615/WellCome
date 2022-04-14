@@ -282,8 +282,8 @@ textarea {
   background-color: #f8f8f8;
   font-size: 16px;
   resize: none;
-  background-color: #05445E;
-  color: white;
+  background-color: white;
+  color: #05445E;
 }
 .custom-intro-1 {
     z-index: 1;
