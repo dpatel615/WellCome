@@ -1,4 +1,3 @@
-var sheesh = document.getElementById("entries");
 var dateValue = document.getElementById("date");
 var submitbttn = document.getElementById("submitBtn");
 var deletebttnarr = document.getElementsByClassName("delete-btn");
@@ -8,76 +7,57 @@ var y = n.getFullYear();
 var m = n.getMonth() + 1;
 var d = n.getDate();
 
-dateValue.innerHTML = m + "/" + d + "/" + y;
+dateValue.innerHTML = "Date: "+ m + "/" + d + "/" + y;
 
 const sendData = async (event) => {
-    try {
-        event.preventDefault();
-        var thoughts = document.getElementById("jo-entry").value; 
-    console.log("send data");
-    console.log(thoughts);
+  try {
+    event.preventDefault();
+    var thoughts = document.getElementById("jo-entry").value;
 
- const response = await fetch(`/api/profiles`, {
-    method: 'POST',
-    body: JSON.stringify({thoughts}),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+    const response = await fetch(`/api/profiles`, {
+      method: 'POST',
+      body: JSON.stringify({ thoughts }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
 
-  if (response.ok) {
-    
-    console.log(response)
-  } else {
-    alert('Failed to post data');
-  }
-    } catch (err) {
-        console.log(err);
+    if (response.ok) {
+      document.location.replace('/api/profiles');
+    } else {
+      alert('Failed to post data');
     }
+  } catch (err) {
+    console.log(err);
+  }
 };
 
-const delData = async (entryId) => {
-  try { 
-    
-   console.log("delete data");
-   console.log("");
+const delData = async (event) => {
+  try {
+    if (event.target.hasAttribute('id')) {
+      const entryId = event.target.getAttribute('id');
 
-   console.log(entryId);
-  // const entryId = this.getAttribute('id');
+      const response = await fetch(`/api/profiles/${entryId}`, {
+        method: 'DELETE',
+      });
 
-   const response = await fetch(`/api/profiles/${entryId}`, {
-    method: 'DELETE',
-   
-  });
-
-  if (response.ok) {
-    
-    // console.log(response)
-    //document.location.replace('/profile');
-    //swal("", "Your journal entry was deleted", "success");
-  } else {
-    alert('Failed to post data');
+      if (response.ok) {
+        document.location.replace('/api/profiles');
+      } else {
+        alert('Failed to post data');
+      }
+    }
+  } catch (err) {
+    console.log(err);
   }
-
-  }
- catch (err) {
-  console.log(err);
-}
-
 };
 
 submitbttn.addEventListener("click", sendData);
-if(deletebttnarr.length !== 0) {
+if (deletebttnarr.length !== 0) {
   console.log(deletebttnarr);
 
-  
   for (let i = 0; i < deletebttnarr.length; i++) {
-    const attr = (deletebttnarr[i].getAttribute('id'));
-     deletebttnarr[i].addEventListener("click", delData(attr));//(deletebttnarr[i].getAttribute('id')));  
+    deletebttnarr[i].addEventListener("click", delData);
   }
-  //  deletebttnarr.forEach((dEl) => {
-  //    dEl.addEventListener("click", delData);    
-  //  });
 }
 
-    
