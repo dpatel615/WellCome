@@ -42,7 +42,8 @@ router.post('/', withAuth, async (req, res) => {
 
 // Default DELETE route for journal entry
 
-router.delete('/:id', withAuth, async (req, res) => {
+
+  router.delete('/:id', withAuth,  async (req, res) => {
   try {
     const journalEntries = await JournalEntry.destroy({
       where: {

@@ -33,7 +33,9 @@
     <h5 class="card-title">Date: {{entry.date_created}}</h5>
     <p class="card-text">{{entry.thoughts}}</p>
     <input type="hidden" class="entryId" value={{entry.id}}>
-    <a href="/api/profiles/{{entry.id}}" id={{entry.id}} class="btn btn-primary delete-btn">Delete</a>
+    {{!-- <a href="/api/profiles/{{entry.id}}" id={{entry.id}} class="btn btn-primary delete-btn">Delete</a> --}}
+     <button type="button" id={{entry.id}}  class="btn btn-primary delete-btn">Delete</button>
+
 
   </div>
 </div>

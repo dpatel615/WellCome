@@ -36,13 +36,14 @@ const sendData = async (event) => {
     }
 };
 
-const delData = async (event) => {
+const delData = async (entryId) => {
   try { 
+    
    console.log("delete data");
    console.log("");
 
-  const entryId = this.getAttribute('id');
-    console.log(entryId);
+   console.log(entryId);
+  // const entryId = this.getAttribute('id');
 
    const response = await fetch(`/api/profiles/${entryId}`, {
     method: 'DELETE',
@@ -51,7 +52,9 @@ const delData = async (event) => {
 
   if (response.ok) {
     
-    console.log(response)
+    // console.log(response)
+    //document.location.replace('/profile');
+    //swal("", "Your journal entry was deleted", "success");
   } else {
     alert('Failed to post data');
   }
@@ -67,13 +70,14 @@ submitbttn.addEventListener("click", sendData);
 if(deletebttnarr.length !== 0) {
   console.log(deletebttnarr);
 
-   
-  for (var i = 0; i < deletebttnarr.length; i++) {
-    deletebttnarr[i].addEventListener("click", delData);  
+  
+  for (let i = 0; i < deletebttnarr.length; i++) {
+    const attr = (deletebttnarr[i].getAttribute('id'));
+     deletebttnarr[i].addEventListener("click", delData(attr));//(deletebttnarr[i].getAttribute('id')));  
   }
-  // deletebttnarr.forEach((dEl) => {
-  //   dEl.addEventListener("click", delData);    
-  // });
+  //  deletebttnarr.forEach((dEl) => {
+  //    dEl.addEventListener("click", delData);    
+  //  });
 }
 
     
