@@ -1,45 +1,32 @@
-<div class="div-1">
-        
-          <div>
-        <a href="/favorites">View my favorites</a>
-    </div> 
-         <div>
-        <a href="/api/profiles">Journal entry history</a>
-    </div> 
-             <form>
-                    <label for="journal entry">Date</label>
-                    {{!-- <input type="text" id="date" name="info" readonly placeholder="Enter date."> --}}
-               <div id="date"></div>
-                <textarea id="jo-entry" name="jo-entry" rows="4" cols="50" placeholder="Enter text here">
-
-
-                </textarea>
-
-                <button type="submit" id="submitBtn">Submit</button>   
-            </form>  
-                    
-        </div>
-
-<div> 
-    {{#each entries as |entry|}}
-{{entry.thoughts}} {{entry.date_created}}
-{{/each}}
-</div>
-
- {{#each entries as |entry|}}
-<div class="card">
-  {{!-- <h5 class="card-header">Featured</h5> --}}
-  <div class="card-body">
-    <h5 class="card-title">Date: {{entry.date_created}}</h5>
-    <p class="card-text">{{entry.thoughts}}</p>
-    <input type="hidden" class="entryId" value={{entry.id}}>
-    {{!-- <a href="/api/profiles/{{entry.id}}" id={{entry.id}} class="btn btn-primary delete-btn">Delete</a> --}}
-     <button type="button" id={{entry.id}}  class="btn btn-primary delete-btn">Delete</button>
-
-
+<div class="row">
+  <div class="col-md-6 text-left">
+    <h3>Journal: </h3>
   </div>
+  <div class="col-md-6 text-right">
+    <a href="/favorites" class="pr-3 profile-links">View my favorites</a>
+    <a href="/api/profiles" class="profile-links">Journal entry history</a>
+  </div>
+  <form>
+    {{!-- <label for="journal entry">Date</label> --}}
+    <div id="date" class="pb-3"></div>
+    <textarea id="jo-entry" name="jo-entry" rows="4" cols="50" autofocus placeholder="Pen your thoughts here...">
+    </textarea>
+    <button type="submit" class="btn btn-primary" id="submitBtn">Save</button>
+  </form>
 </div>
-{{/each}}
+
+<div class="row pt-3">
+  {{#each entries as |entry|}}
+  <div class="col-md-4">
+    <div class="card journal-card">
+      <div class="card-body journal-card-body">
+        <h5 class="card-title">Date: {{entry.date_created}}</h5>
+        <p class="card-text">{{entry.thoughts}}</p>
+        <input type="hidden" class="entryId" value={{entry.id}}>
+        <button type="button" id={{entry.id}} class="btn btn-primary delete-btn">Delete</button>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
 <script src="/js/profile.js"></script>
-
-

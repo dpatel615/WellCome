@@ -62,8 +62,7 @@ router.get('/favorites', withAuth, async (req, res) => {
     });
 
     const data = userInfo.get({ plain: true});
-    console.log(data);
-
+  
     res.render('gallery', {
       data,
       dashboard: true,
@@ -79,7 +78,7 @@ router.get('/favorites', withAuth, async (req, res) => {
 });
 
 // GET route to fetch videos from youtube API based on keyword search
-router.get('/:catName', withAuth, async (req, res) => {
+router.get('/:catName', async (req, res) => {
   try {
     let category = req.params.catName;
     if (category == "Music") {

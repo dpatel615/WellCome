@@ -3,7 +3,7 @@ const { JournalEntry } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // // GET route for journal entry
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   // Once user types entries and submits, GET data
   try {
     const entryArr = await JournalEntry.findAll({

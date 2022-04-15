@@ -16,7 +16,7 @@ var quotes =[
   
 
    var x = document.getElementById("emotion");
-   x.style.display= "none"
+   x.style.display= "none";
   
    document.getElementById('quoteEmotion').addEventListener('click', displayImage);
     function displayImage() {

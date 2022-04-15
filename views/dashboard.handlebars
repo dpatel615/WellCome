@@ -1,55 +1,41 @@
-
-<p class="git">How are you feeling today?</p>
-<div id="quoteEmotion">
+<div class="row d-flex justify-content-center">
+    <p class="git">How are you feeling today?</p>
 </div>
-
-<div id="emotion">
-<button onclick="newQuote()"><img src="/images/angry.png" height="150px" width="200px" ></button>
-<button onclick="newQuote()"><img src="/images/happy.png" height="150px" width="200px" ></button>
-<button onclick="newQuote()"><img src="/images/sad.png" height="150px" width="200px"></button>
-<button onclick="newQuote()"><img src="/images/worried.png" height="150px" width="200px"></button>
-<button onclick="newQuote()"><img src="/images/confused.png" height="150px" width="200px"></button>
-<button onclick="newQuote()"><img src="/images/scared.png" height="150px" width="200px"></button>
-
-{{!-- <button onclick="newQuote()"><img src="/images/em--6.png"></button>
-<button onclick="newQuote()"><img src="/images/em-7.png"></button>
-<button onclick="newQuote()"><img src="/images/em-8.png"></button>
-
-</div> --}}
-
-    {{!-- <h2> Relaxing videos</h2>
-    <button type="button" id="Meditation" class="videos-link"><img src="/images/meditation.png" height="300px" width="100%"/></button>
-     <button type="button" id="Yoga" class="videos-link"><img src="/images/yoga.png" height="300px" width="100%"/></button>
-      <button type="button" id="Music" class="videos-link"><img src="/images/music.png" height="300px" width="100%"/></button> --}}
-    {{!-- <button type="button" class="video-links" data-id="Meditation">Meditation</button>
-    <button type="button" class="video-links" data-id="Yoga">Yoga</button> --}}
-
-    {{!-- <a href="/api/dashboard/Meditation" class="video-links button" data-id="Meditation"><img
-            src="/images/Meditation.jpg" alt="Meditation" width="300" height="230">Meditation</a> --}}
-    {{!-- <a href="/api/dashboard/Yoga" class="video-links button" data-id="Yoga">Yoga</a>
-    <a href="/api/dashboard/Music" class="video-links button" data-id="Music">Music</a> --}}
-    {{!-- <button type="button" class="video-links" data-id="Yoga">Yoga</button> --}}
-
-</div>
-<br>
-<p id="relaxing">The Sounds of Inner Peace </p>
 <div class="row">
-    <div class="col-md-4 image_div " style="padding: auto;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;" >
-        
+    <div id="quoteEmotion">
+    </div>
+    <div id="emotion">
+        <button onclick="newQuote()"><img src="/images/angry.png" class="custom-emotions"></button>
+        <button onclick="newQuote()"><img src="/images/happy.png" class="custom-emotions"></button>
+        <button onclick="newQuote()"><img src="/images/sad.png" class="custom-emotions"></button>
+        <button onclick="newQuote()"><img src="/images/worried.png" class="custom-emotions"></button>
+        <button onclick="newQuote()"><img src="/images/confused.png" class="custom-emotions"></button>
+        <button onclick="newQuote()"><img src="/images/scared.png" class="custom-emotions"></button>
+    </div>
+</div>
+<div class="row">
+    <p id="relaxing">The Sounds of Inner Peace </p>
+</div>
+<div class="row">
+    <div class="col-md-4 image_div "
+        style="padding: auto;  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
+
         <a href="/Meditation" class="video-links button" data-id="Meditation">
             <img src="/images/meditation.png" alt="Meditation" width="400" height="200">
             <p class="image_label"><span>Meditation</span></p>
         </a>
     </div>
 
-    <div class="col-md-4 image_div" style="padding: auto; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(78, 15, 15, 0.09) 0px -3px 5px;">
+    <div class="col-md-4 image_div"
+        style="padding: auto; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(78, 15, 15, 0.09) 0px -3px 5px;">
         <a href="/Yoga" class="video-links button" data-id="Yoga">
             <img src="/images/yoga.png" alt="Yoga" width="400" height="200">
             <p class="image_label"><span>Yoga</span></p>
         </a>
     </div>
 
-    <div class="col-md-4 image_div" style="padding: auto; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
+    <div class="col-md-4 image_div"
+        style="padding: auto; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
         <a href="/Music" class="video-links button" data-id="Music">
             <img src="/images/relaxmusic.png" alt="Music" width="400" height="200">
             <p class="image_label"><span>Music</span></p>
@@ -57,6 +43,4 @@
     </div>
 </div>
 
-<script src="/js/dashboard.js"></script>  
-
-
+<script src="/js/dashboard.js"></script>
