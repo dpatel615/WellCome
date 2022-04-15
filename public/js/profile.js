@@ -23,7 +23,9 @@ const sendData = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/api/profiles');
+      document.getElementById("jo-entry").value = "";
+      swal("", "Saved journal entry!", "success");
+      // document.location.replace('/api/profiles');
     } else {
       alert('Failed to post data');
     }
@@ -54,8 +56,7 @@ const delData = async (event) => {
 
 submitbttn.addEventListener("click", sendData);
 if (deletebttnarr.length !== 0) {
-  console.log(deletebttnarr);
-
+  
   for (let i = 0; i < deletebttnarr.length; i++) {
     deletebttnarr[i].addEventListener("click", delData);
   }
